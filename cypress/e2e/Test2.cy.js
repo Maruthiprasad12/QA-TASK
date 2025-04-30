@@ -45,7 +45,7 @@ describe('TestCafe UI Automation', () => {
       cy.get('li[role="option"]').first().click()
       cy.get('input[placeholder="DD/MM/YYYY"]').type('25/12/2023')
       cy.get('.ql-editor').type('Test task description')
-      cy.get('input[type="file"]').selectFile('C:/Users/saive/OneDrive/Desktop/Assesment/cypress/fixtures/sample.csv', { force: true })
+      cy.get('input[type="file"]').selectFile('cypress/fixtures/sample.csv', { force: true })
       cy.get('button[type="submit"]').should('not.be.disabled')
       cy.get('button[type="submit"]').click();
       cy.get("div[role='presentation'] button:nth-child(2)").click();
